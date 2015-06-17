@@ -1,0 +1,10 @@
+.panelGridCenter {
+    position: absolute;
+    left: 640px;
+    height: 300px;
+    top: 300px;
+    color: white;   
+}
+.color{
+    color: white;
+}

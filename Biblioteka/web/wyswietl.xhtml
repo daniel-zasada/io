@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Biblioteka</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+    
+    .Bimage{background-image: url("resources/biblioteka.jpg"); }
+    
+</style>
+    </h:head>
+    <h:body styleClass="Bimage">
+        <h:outputStylesheet library="css" name="style.css"  />
+        <p:dataTable var="ksiazki" value="" styleClass="color">
+    <p:column headerText="Id">
+        <h:outputText value="1" /><br/>
+        <h:outputText value="2" /><br/>
+        <h:outputText value="3" /><br/>
+        <h:outputText value="4" /><br/>
+    </p:column>
+ 
+    <p:column headerText="Tytuł">
+        <h:outputText value="Ręka mistrza" /><br/>
+        <h:outputText value="Bastion" /><br/>
+        <h:outputText value="Anioły i demony" /><br/>
+        <h:outputText value="Sherlock Holmes" /><br/>
+    </p:column>
+ 
+    <p:column headerText="Autor">
+        <h:outputText value="Autor 1" /><br/>
+        <h:outputText value="Autor 2" /><br/>
+        <h:outputText value="Autor 3" /><br/>
+        <h:outputText value="Autor 4" /><br/>
+    </p:column>
+ 
+    <p:column headerText="Wydawnictwo">
+        <h:outputText value="WSiP" /><br/>
+        <h:outputText value="ZYSK" /><br/>
+        <h:outputText value="ZYSK" /><br/>
+        <h:outputText value="WIuIp" /><br/>
+    </p:column>
+           
+     <p:column headerText="Rok">
+        <h:outputText value="1999" /><br/>
+        <h:outputText value="1998" /><br/>
+        <h:outputText value="1994" /><br/>
+        <h:outputText value="1992" /><br/>
+    </p:column>
+</p:dataTable>
+    </h:body>
+</html>

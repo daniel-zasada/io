@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Biblioteka</title>
+<style>
+    
+    .Bimage{background-image: url("resources/biblioteka.jpg"); }
+    
+</style>
+
+</h:head>
+    <h:body styleClass="Bimage">
+        <h:outputStylesheet library="css" name="style.css"  />
+	<h:form id="loginForm">
+            <h:panelGrid columns="2" styleClass="panelGridCenter" >
+                <h:outputLabel value="Imie: " />
+                <p:inputText value="#{loginBean.name}" />
+                <h:outputLabel value="Drugie imie (opcjonalnie): " />
+                <p:inputText value="#{loginBean.secName}" />
+                <h:outputLabel value="Nazwisko: " />
+                <p:inputText  value="#{loginBean.surname}" />
+                <h:outputLabel value="Login: " />
+                <h:outputText id="loginFirst"  value="#{loginBean.username}"/>
+                <h:outputText id="empty"  value=""/>
+                <h:commandButton value="Generuj login" action="#{loginBean.generateLogin()}" />
+                <h:outputLabel value="Miejscowosc: " />
+                <h:inputText id="miejscowosc"  value="#{loginBean.city}"/>
+                <h:outputLabel value="Adres: " />
+                <h:inputText id="adress"  value="#{loginBean.adress}"/>
+                <h:outputLabel value="Kod pocztowy: " />
+                <h:inputText id="kod"  value="#{loginBean.kod}"/>
+                
+               
+		<h:outputLabel value="Haslo: " />
+		<h:inputSecret value="#{loginBean.password}">
+                </h:inputSecret>
+               
+            <br/><br/>
+                <h:commandButton value="Zarejestruj" action="#{loginBean.register()}"/>
+                <br/><br/>
+                <h:link value="Zaloguj" outcome="login"/>
+                
+           </h:panelGrid>
+               
+	</h:form>
+
+</h:body>
+</html>
